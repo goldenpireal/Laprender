@@ -26,10 +26,3 @@ def save_session(duration, date):
 
     conn.close()
 
-conn = sqlite3.connect("laprender.db")
-c = conn.cursor()
-
-result = c.execute("select * from sessions")
-print(result.fetchall())
-
-conn.close()
