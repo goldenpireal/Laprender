@@ -20,22 +20,17 @@ def session_initiator():
             print("Invalid Input")
 
     time_end = datetime.now().replace(microsecond=0)
+    date = time_end.date()
 
     timedelta = time_end - time_start
 
-    seconds = int(timedelta.total_seconds())
-    minutes = seconds // 60
+    duration = int(timedelta.total_seconds())
 
-    duration_hour = minutes // 60
-    duration_min = minutes - (duration_hour)*60
-    duration_sec = seconds - (minutes)*60
-
-    duration = [duration_hour, duration_min, duration_sec]
 
     print("Study session: ", time_start, "->", time_end)
     
 
-    return duration
+    return duration, date
 
 
 
