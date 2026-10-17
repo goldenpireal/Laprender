@@ -1,9 +1,11 @@
 import sessions
 import time
 import database
+import retrival
 
 while True:
     print("1.Start a study session")
+    print("2.Serach for sessions")
     print("0.Exit")
 
     try:
@@ -40,6 +42,9 @@ while True:
     elif choice == 0:
         print("Goodbye.. see yya later")
         break
+
+    elif choice == 2:
+        retrival.retrive()
 
     else:
         print()
